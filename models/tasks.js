@@ -10,9 +10,12 @@ const Tasks = sequelize.define("tasks", {
     title: {
         type: DataTypes.STRING
     },
+    description: {
+        type: DataTypes.STRING
+    },
     stage: {
         type: DataTypes.INTEGER,
     },
-}, {timestamps: false});
+}, {timestamps: true});
 
 module.exports = Tasks;
