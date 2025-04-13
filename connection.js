@@ -10,7 +10,7 @@ const seedTasks = async () => {
     const statuses = [0, 1, 2, 3];
 
     const tasks = Array.from({ length: 100 }).map(() => ({
-      title: faker.lorem.words(3),
+      name: faker.lorem.words(3),
       description: faker.lorem.sentence(),
       stage: statuses[Math.floor(Math.random() * statuses.length)],
     }));

@@ -14,7 +14,7 @@ const getAllTasks = async (req, res) => {
 
   if (search) {
     where[Op.or] = [
-      { title: { [Op.like]: `%${search}%` } },
+      { name: { [Op.like]: `%${search}%` } },
       { description: { [Op.like]: `%${search}%` } },
     ];
   }
