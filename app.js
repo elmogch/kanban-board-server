@@ -7,7 +7,7 @@ var logger = require('morgan');
 require('./connection');
 
 var indexRouter = require('./routes/index');
-var boardsRouter = require('./routes/tasks');
+var tasksRouter = require('./routes/tasks');
 
 var app = express();
 
@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/tasks', boardsRouter);
+app.use('/tasks', tasksRouter);
 
 
 module.exports = app;
